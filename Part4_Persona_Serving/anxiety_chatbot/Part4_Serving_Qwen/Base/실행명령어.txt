@@ -1,0 +1,17 @@
+Base 서버 실행 (CMD)
+
+Part4_Serving_Qwen 폴더에서 시작:
+  py -m pip install -r Base\requirements.txt
+  cd Base
+  dir app.py
+  py -m modal deploy app.py
+
+  set "MODAL_API_URL=https://somsomthals317--anxiety-chatbot-base-modal-api.us-east.modal.run"
+  set "MODAL_API_TOKEN=발급받은_BASE_APP_API_TOKEN"
+  py app.py
+
+Gradio 기본 주소: http://127.0.0.1:7861
+포트 변경: set "PORT=7862" 한 다음 py app.py
+
+참고: MODAL_API_TOKEN은 Modal Secret anxiety-chatbot-base-app-token의
+APP_API_TOKEN과 같은 값이어야 합니다. 이 파일에 실제 토큰을 넣지 마세요.

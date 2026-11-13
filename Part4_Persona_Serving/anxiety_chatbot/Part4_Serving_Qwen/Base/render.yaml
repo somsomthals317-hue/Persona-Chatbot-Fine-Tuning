@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: anxiety-chatbot-base-ui
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: MODAL_API_URL
+        sync: false
+      - key: MODAL_BILLING_URL
+        sync: false
+      - key: MODAL_API_TOKEN
+        sync: false
+
